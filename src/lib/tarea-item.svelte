@@ -1,3 +1,7 @@
+<script lang="ts">
+    export let tarea: Tarea;
+</script>
+
 <style>
     .tarea {
         display: grid;
@@ -44,8 +48,8 @@
     .guardar {
         position: absolute;
         right: 0;
-        opacity: 0;
-        background-image: url("");
+        opacity: 0.5;
+        background-image: url("../home/ars-magnum/Imágenes/32officeicons-3_89720.png");
     }
 
     .tarea input:focus + .guardar, .guardar:focus {
@@ -54,7 +58,7 @@
     }
 
     .borrar {
-        background-image: url("");
+        background-image: url("/home/ars-magnum/Imágenes/tab_desktop_arrow_clockwise_regular_icon_204191.png height= 64px width= 64px");
         opacity: 0.2;
     }
     .borrar:hover,
@@ -79,7 +83,7 @@
 <div class="tarea done">
     <form action="" method="">
         <input type="hidden" name="done" value="" />
-        <button aria-label="Marca hecho/por hacer" class="toggle">Hecho/PorHacer</button>
+        <button aria-label="Marca hecho/por hacer" class="toggle"></button>
     </form>
 
     <form action="" method="">
@@ -87,7 +91,7 @@
     </form>
 
     <form action="" method="" class="texto">
-        <input type="hidden" name="done" value="" />
+        <input type="hidden" name="done" value="{tarea.text}" />
         <button aria-label="Guarda tarea" class="guardar"></button>
     </form>
 
