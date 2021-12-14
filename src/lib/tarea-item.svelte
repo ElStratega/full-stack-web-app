@@ -1,6 +1,6 @@
 <style>
     .tarea {
-        display:grid;
+        display: grid;
         grid-template-columns: 2rem 1fr 2rem;
         grid-gap: 0.5rem;
         align-items: center;
@@ -27,16 +27,16 @@
         border-radius: 3px;
     }
 
-    .toggle {
+    button.toggle {
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 50%;
-        box-sizing:border-box;
+        box-sizing: border-box;
         background-size: 1em auto;
     }
 
     .texto {
-        position:relative;
-        display:flex;
+        position: relative;
+        display: flex;
         align-items: center;
         flex: 1;
     }
@@ -45,16 +45,38 @@
         position: absolute;
         right: 0;
         opacity: 0;
-        background-image: url();
+        background-image: url("");
     }
 
-    .tarea input:focus + .guardar {
+    .tarea input:focus + .guardar, .guardar:focus {
         transition: opacity 0.2s;
-        opacity:1;
+        opacity: 1;
     }
-</style>
 
-<div class="tarea">
+    .borrar {
+        background-image: url("");
+        opacity: 0.2;
+    }
+    .borrar:hover,
+    .borrar:focus {
+        transition: opacity 0.2s;
+        opacity: 1;
+    }
+
+/* TODO: Uncomment when the API endpoints are available
+    .done {
+        transform: none;
+        opacity: 0.4;
+        filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.1))
+    }
+
+    .done .toggle {
+        background-image: url("");
+    }
+ */
+ </style>
+
+<div class="tarea done">
     <form action="" method="">
         <input type="hidden" name="done" value="" />
         <button aria-label="Marca hecho/por hacer" class="toggle">Hecho/PorHacer</button>
@@ -70,7 +92,7 @@
     </form>
 
     <form action="" method="">
-        <button aria-label="Borra tarea" class="borrar">Borrar</button>
+        <button aria-label="Borra tarea" class="borrar"></button>
     </form>
 
 </div>
