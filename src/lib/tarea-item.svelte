@@ -1,15 +1,76 @@
-<div>
+<style>
+    .tarea {
+        display:grid;
+        grid-template-columns: 2rem 1fr 2rem;
+        grid-gap: 0.5rem;
+        align-items: center;
+        margin: 0 0 0.5rem 0;
+        background-color: white;
+        border-radius: 8px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.082));
+        transform: translate(-1px, -1px);
+        transition: filter 0.2s, transform 0.2s;
+    }
+
+    .tarea button {
+        width: 2em;
+        height: 2em;
+        border: none;
+        background-color: transparent;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .tarea input {
+        flex: 1;
+        padding: 0.5em 2em 0.5em 0.8em;
+        border-radius: 3px;
+    }
+
+    .toggle {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        box-sizing:border-box;
+        background-size: 1em auto;
+    }
+
+    .texto {
+        position:relative;
+        display:flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    .guardar {
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        background-image: url();
+    }
+
+    .tarea input:focus + .guardar {
+        transition: opacity 0.2s;
+        opacity:1;
+    }
+</style>
+
+<div class="tarea">
     <form action="" method="">
         <input type="hidden" name="done" value="" />
-        <button aria-label="Marca hecho/por hacer">Hecho/Porhacer</button>
+        <button aria-label="Marca hecho/por hacer" class="toggle">Hecho/PorHacer</button>
     </form>
 
     <form action="" method="">
+        <input type="text" name="text" aria-label="Añade una tarea" />
+    </form>
+
+    <form action="" method="" class="texto">
         <input type="hidden" name="done" value="" />
-        <button aria-label="Guarda tarea">Guardar</button>
+        <button aria-label="Guarda tarea" class="guardar"></button>
     </form>
 
     <form action="" method="">
-        <button aria-label="Borra tarea">Borrar</button>
+        <button aria-label="Borra tarea" class="borrar">Borrar</button>
     </form>
+
 </div>

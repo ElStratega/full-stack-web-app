@@ -1,0 +1,30 @@
+:root {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --primary-color: #b9c6d2;
+    --secondary-color: #d0dde9;
+    --tertiary-color: moccasin;
+}
+
+body {
+    background-color: var(--primary-color);
+    background: linear-gradient(
+        180deg,
+        var(--primary-color),
+        var(--secondary-color),
+        var(--tertiary-color)
+    );
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media (min-width: 720px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+    
+}
