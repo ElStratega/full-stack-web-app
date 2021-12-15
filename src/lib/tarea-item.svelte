@@ -49,7 +49,7 @@
         position: absolute;
         right: 0;
         opacity: 0.5;
-        background-image: url("../home/ars-magnum/Imágenes/32officeicons-3_89720.png");
+        background-image: url("");
     }
 
     .tarea input:focus + .guardar, .guardar:focus {
@@ -58,7 +58,7 @@
     }
 
     .borrar {
-        background-image: url("/home/ars-magnum/Imágenes/tab_desktop_arrow_clockwise_regular_icon_204191.png height= 64px width= 64px");
+        background-image: url("");
         opacity: 0.2;
     }
     .borrar:hover,
